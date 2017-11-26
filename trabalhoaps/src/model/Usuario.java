@@ -1,4 +1,4 @@
-package trabalhoAPS;
+package model;
 
 public class Usuario {
 	private String identificador;
@@ -12,9 +12,5 @@ public class Usuario {
 		this.nome = nome;
 		this.login = login;
 		this.senha = senha;
-	}
-	
-	public String getNome(){
-		return this.nome;
 	}
 }
