@@ -1,0 +1,23 @@
+package model;
+
+public class ReservaAtiva extends ReservaState{
+
+	@Override
+	public void ativar() {
+		System.out.println("A reserva já está ativa");
+		
+	}
+
+	@Override
+	public void baixar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancelar() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

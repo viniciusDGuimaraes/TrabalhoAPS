@@ -1,0 +1,40 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import infrastructure.InfraFacade;
+
+public class LivroFisico extends Livro{
+	private List<Exemplar> exemplares;
+	private List<Secao> secoes = new ArrayList<Secao>();
+	
+	public LivroFisico(String identificador, String titulo) {
+		super(identificador, titulo);
+	}
+	
+	public Livro(){}
+	
+	public void adicionarExemplar(Exemplar e){
+		exemplares.add(e);
+	}
+	
+	public void adicionarSecao(Secao s){
+		secoes.add(s);
+		System.out.println("Adicionou seção ao livro");
+	}
+	
+	public void reservar(Usuario u){
+		Reserva r = new Reserva(this, u);
+		InfraFacade infra = InfraFacade.getInstance();
+		infra.reservarLivro(r);
+	}
+	
+	public void baixarReserva(Reserva r){
+		r.baixar();
+	}
+	
+	public void cancelarReserva(Reserva r){
+		r.cancelar();
+	}
+}

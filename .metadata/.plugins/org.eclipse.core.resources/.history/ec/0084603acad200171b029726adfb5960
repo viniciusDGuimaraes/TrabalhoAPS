@@ -1,0 +1,17 @@
+package model;
+
+public class Reserva {
+	private Livro livro;
+	private Usuario usuario;
+	private Date prazoRetirada;
+	
+	public Reserva(Livro livro, Usuario usuario, Date prazoRetirada) {
+		this.livro = livro;
+		this.usuario = usuario;
+		this.prazoRetirada = prazoRetirada;
+	}
+	
+	public Reserva(){
+		
+	}
+}

@@ -1,0 +1,25 @@
+package model;
+
+import java.util.Iterator;
+
+public class IteratorSecao implements Iterator{
+	private Lista l;
+	private int posicao;
+	
+	public IteratorSecao(Lista l){
+		this.l = l;
+		this.posicao= 0;
+	}
+	
+	public boolean hasNext(){
+		return this.posicao < l.size();
+	}
+	
+	public Object next() {
+		return l.get(++posicao);
+	}
+	
+	public Object currentItem(){
+		return l.get(posicao);
+	}
+}

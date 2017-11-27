@@ -1,0 +1,17 @@
+package view;
+
+public class FazerReservaDecorator extends CommandComponent{
+
+	private CommandComponent component;
+	
+	public FazerReservaDecorator(CommandComponent decorates){
+		this.component = decorates;
+	}
+	
+	@Override
+	public void autentica() {
+		System.out.println(this.component + " autenticado");
+		
+	}
+	
+}

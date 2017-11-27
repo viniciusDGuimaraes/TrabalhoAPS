@@ -1,0 +1,20 @@
+package model;
+
+public class ReservaCancelada extends ReservaState{
+
+	@Override
+	public void ativar() {
+		System.out.println("Não é possivel ativar uma reserva que foi cancelada");
+	}
+
+	@Override
+	public void baixar() {
+		System.out.println("Não é possivel dar baixa em uma reserva que foi cancelada");
+	}
+
+	@Override
+	public void cancelar() {
+		System.out.println("Reserva canncelada com sucesso");
+	}
+
+}

@@ -1,0 +1,13 @@
+package view;
+
+import trabalhoAPS.ModelFacade;
+
+public class FazerReservaCommand implements Command{
+
+	@Override
+	public void execute() {
+		ModelFacade mf = ModelFacade.getInstance();
+		mf.reservarLivro();
+	}
+	
+}

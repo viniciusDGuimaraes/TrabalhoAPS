@@ -1,0 +1,19 @@
+package view;
+
+import Application.ApplicationFacade;
+import model.Reserva;
+
+public class FazerReservaCommand extends FazerReservaDecorator implements Command{
+
+	public FazerReservaCommand(FazerReservaComponent decorates) {
+		super(decorates);
+	}
+
+	@Override
+	public void execute() {
+		
+		Reserva r = new Reserva();
+		ApplicationFacade.reservarLivro(r);
+	}
+	
+}

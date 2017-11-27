@@ -1,10 +1,11 @@
 package Application;
 
-import model.Reserva;
+import model.LivroFisico;
+import model.Usuario;
 
 public class ApplicationFacade {	
-	public static void reservarLivro(Reserva r){
-		UsuarioServices.reservaLivro(r);
+	public static void reservarLivro(LivroFisico l, Usuario u){
+		UsuarioServices.reservaLivro(l, u);
 		System.out.println("Chamou o UsuarioServices");
 	}
 }

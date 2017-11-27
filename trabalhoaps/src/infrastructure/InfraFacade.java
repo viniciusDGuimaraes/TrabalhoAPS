@@ -13,7 +13,7 @@ public class InfraFacade {
 	}
 	
 	public void reservarLivro(Reserva r){
-		Database.reservas.add(r);
+		Repository.reservas.add(r);
 		System.out.println("Reserva Livro");
 	}
 	

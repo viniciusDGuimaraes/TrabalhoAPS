@@ -1,0 +1,14 @@
+package model;
+
+import infrastructure.Database;
+import infrastructure.InfraFacade;
+
+public class ModelFacade {
+	
+	public static void reservarLivro(Livro l, Usuario u){
+		l.reservar(u);
+		InfraFacade infra = InfraFacade.getInstance();
+		infra.reservarLivro(r);
+		System.out.println("Chamou infra facade");
+	}
+}

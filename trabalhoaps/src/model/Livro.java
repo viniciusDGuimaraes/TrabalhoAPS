@@ -3,10 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Livro {
+public abstract class Livro {
 	private String identificador;
 	private String titulo;
-	private List<Exemplar> exemplares;
 	private List<Secao> secoes = new ArrayList<Secao>();
 	
 	public Livro(String identificador, String titulo) {
@@ -14,14 +13,10 @@ public class Livro {
 		this.titulo = titulo;
 	}
 	
-	public void adicionarExemplar(Exemplar e){
-		exemplares.add(e);
-	}
+	public Livro(){}
 	
 	public void adicionarSecao(Secao s){
 		secoes.add(s);
 		System.out.println("Adicionou seção ao livro");
 	}
-	
-	
 }

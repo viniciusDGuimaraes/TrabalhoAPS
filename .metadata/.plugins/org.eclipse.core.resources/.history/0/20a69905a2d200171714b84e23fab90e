@@ -1,0 +1,25 @@
+package model;
+import java.util.ArrayList;
+
+public class Lista extends AbstractList{
+	private ArrayList lista = new ArrayList();
+	
+	public IteratorSecao iterator() {
+		return new IteratorSecao(this);
+	}
+
+	@Override
+	public void appent(Object o) {
+		lista.add(o);
+	}
+
+	@Override
+	public int size() {
+		return lista.size();
+	}
+
+	@Override
+	public Object get(int i) {
+		return lista.get(i);
+	}
+}

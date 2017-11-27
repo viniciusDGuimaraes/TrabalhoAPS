@@ -1,0 +1,28 @@
+package model;
+
+import java.util.Date;
+
+public class Reserva {
+	private Livro livro;
+	private Usuario usuario;
+	private Date prazoRetirada;
+	private ReservaState status = new ReservaAtiva();
+	
+	public ReservaState getStatus(){
+		return status;
+	}
+	
+	public void setStatus(ReservaState status){
+		this.status = status;
+	}
+	
+	public Reserva(Livro livro, Usuario usuario, Date prazoRetirada) {
+		this.livro = livro;
+		this.usuario = usuario;
+		this.prazoRetirada = prazoRetirada;
+	}
+	
+	public Reserva(){
+		
+	}
+}

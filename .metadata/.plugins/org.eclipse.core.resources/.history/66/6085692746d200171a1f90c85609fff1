@@ -1,0 +1,18 @@
+package Application;
+
+public class ApplicationFacade {
+	private static ApplicationFacade instance;
+	
+	public static ApplicationFacade getInstance(){
+		if(instance == null){
+			instance = new ApplicationFacade();
+		}
+		return instance;
+	}
+	
+	public void invoke(String command){
+		ApplicationFacade inv = ApplicationFacade.getInstance();
+		inv.invoke(command);
+		System.out.println("Chamou o invoker");
+	}
+}

@@ -1,0 +1,26 @@
+package trabalhoAPS;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import infrastructure.Secao;
+import trabalhoAPS.Lista;
+import trabalhoAPS.Livro;
+
+public class SubSecao extends Secao{
+	private Livro livro;
+	private String nome;
+	private Lista subsecao = new Lista();
+	
+	public SubSecao(Livro livro, String nome){
+		this.livro = livro;
+		this.nome = nome;
+		livro.adicionarSecao(this);
+		System.out.println("Adicionou Seção");
+	}
+	
+	public void adicionar(Secao s) {
+		subsecao.appent(s);		
+		System.out.println("Adicionou subseção");
+	}
+}

@@ -1,0 +1,10 @@
+package view;
+
+public abstract class CommandDecorator extends CommandComponent{
+	
+	@Override
+	public void autentica() {
+		component.autentica();		
+	}
+	
+}

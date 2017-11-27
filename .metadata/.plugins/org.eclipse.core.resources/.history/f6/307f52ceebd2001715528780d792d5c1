@@ -1,0 +1,20 @@
+package model;
+
+public class ReservaBaixada extends ReservaState{
+
+	@Override
+	public void ativar() {
+		System.out.println("Não é possível ativar uma reserva que foi baixada");
+	}
+
+	@Override
+	public void baixar() {
+		System.out.println("Reserva baixada com sucesso");
+	}
+
+	@Override
+	public void cancelar() {
+		System.out.println("Não é possível cancelar uma reserva que foi baixada");
+	}
+
+}

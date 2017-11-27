@@ -1,0 +1,20 @@
+package Application;
+
+import model.Reserva;
+
+public class ApplicationFacade {
+	private static ApplicationFacade instance;
+	
+	public static ApplicationFacade getInstance(){
+		if(instance == null){
+			instance = new ApplicationFacade();
+		}
+		return instance;
+	}
+	
+	public void reservarLivro(Reserva r){
+		UsuarioServices u = new UsuarioServices();
+		u.reservaLivro(r);
+		System.out.println("Chamou o UsuarioServices");
+	}
+}

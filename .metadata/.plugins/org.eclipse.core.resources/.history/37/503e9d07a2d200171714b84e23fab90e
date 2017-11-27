@@ -1,0 +1,20 @@
+package model;
+
+public class SubSecao extends Secao{
+	private Livro livro;
+	private String nome;
+	private Lista secoes = new Lista();
+	private IteratorSecao i = new IteratorSecao(secoes);
+	
+	public SubSecao(Livro livro, String nome){
+		this.livro = livro;
+		this.nome = nome;
+		System.out.println("Adicionou Seção");
+		this.livro.adicionarSecao(this);
+	}
+	
+	public void adicionar(Secao s){
+		secoes.appent(s);
+		System.out.println("Adiconou uma subseção");
+	}
+}

@@ -1,0 +1,15 @@
+package view;
+
+
+public class ViewFacade {
+	private static ViewFacade instance;
+	
+	public static ViewFacade getInstance(){
+		if(instance == null){
+			instance = new ViewFacade();
+		}
+		return instance;
+	}
+	
+	
+}

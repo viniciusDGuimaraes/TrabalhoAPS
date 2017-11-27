@@ -1,0 +1,14 @@
+package view;
+
+public abstract class CommandDecorator{
+	private Command component;
+	
+	public CommandDecorator(Command decorates){
+		this.component = decorates;
+	}
+	
+	public void autentica() {
+		component.autentica();		
+	}
+	
+}

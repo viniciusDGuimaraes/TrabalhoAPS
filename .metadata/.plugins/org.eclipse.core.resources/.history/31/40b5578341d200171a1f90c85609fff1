@@ -1,0 +1,21 @@
+package model;
+
+import infrastructure.Database;
+
+public class ModelFacade {
+	private static ModelFacade instance;
+	
+	public static ModelFacade getInstance(){
+		if(instance == null){
+			instance = new Singleton();
+		}
+		return instance;
+	}
+	
+	public void reservarLivro(Reserva r){
+		Database.reservas.add(r);
+	}
+	
+	private Singleton(){
+	}
+}

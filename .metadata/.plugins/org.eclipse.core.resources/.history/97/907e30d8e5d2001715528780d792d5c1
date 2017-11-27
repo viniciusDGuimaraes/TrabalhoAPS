@@ -1,0 +1,13 @@
+package model;
+
+public abstract class Livro {
+	private String identificador;
+	private String titulo;
+	
+	public Livro(String identificador, String titulo){
+		this.identificador = identificador;
+		this.titulo = titulo;
+	}
+	
+	public Livro(){}
+}

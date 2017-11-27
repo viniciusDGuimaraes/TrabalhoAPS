@@ -1,0 +1,10 @@
+package Application;
+
+import model.ModelFacade;
+import model.Reserva;
+
+public class UsuarioServices {
+	public void reservaLivro(Reserva r){
+		ModelFacade mf = ModelFacade.getInstance();
+	}
+}

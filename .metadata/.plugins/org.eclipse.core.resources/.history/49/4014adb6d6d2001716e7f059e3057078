@@ -1,0 +1,17 @@
+package view;
+
+import Application.ApplicationFacade;
+import model.Livro;
+
+public class FazerReservaCommand implements Command{
+
+	@Override
+	public void execute() {
+		Livro l = new Livro();
+		Usuario u = new Usuario();
+		FazerReservaComponent fd = new FazerReservaComponent();
+		fd.autentica();
+		ApplicationFacade.reservarLivro(l, u);
+	}
+	
+}

@@ -1,0 +1,23 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Livro {
+	private String identificador;
+	private String titulo;
+	private List<Secao> secoes = new ArrayList<Secao>();
+	
+	public Livro(String identificador, String titulo) {
+		this.identificador = identificador;
+		this.titulo = titulo;
+	}
+	
+	public Livro(){}
+	
+	public abstract void reservar(Usuario u);
+	
+	public abstract void baixarReserva(Usuario u);
+	
+	public abstract void cancelarReserva(Usuario u);
+}

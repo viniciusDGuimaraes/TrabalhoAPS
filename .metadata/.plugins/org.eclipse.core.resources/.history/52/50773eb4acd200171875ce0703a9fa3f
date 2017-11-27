@@ -1,0 +1,15 @@
+package view;
+
+
+public class FazerReservaDecorator extends CommandDecorator{
+
+	public FazerReservaDecorator(CommandComponent decorates) {
+		super(decorates);
+	}
+	
+	@Override
+	public void autentica(){
+		super().autentica();
+		System.out.println("Fazer Reserva Autenticado");
+	}
+}

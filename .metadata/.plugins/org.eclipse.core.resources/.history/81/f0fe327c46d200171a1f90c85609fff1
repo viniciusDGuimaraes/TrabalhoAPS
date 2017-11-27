@@ -1,0 +1,9 @@
+package Application;
+
+import model.Reserva;
+
+public class UsuarioServices {
+	public void reservaLivro(Reserva r){
+		
+	}
+}

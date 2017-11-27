@@ -1,0 +1,14 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Livro {
+	private String identificador;
+	private String titulo;
+	
+	public Livro(String identificador, String titulo) {
+		this.identificador = identificador;
+		this.titulo = titulo;
+	}
+}

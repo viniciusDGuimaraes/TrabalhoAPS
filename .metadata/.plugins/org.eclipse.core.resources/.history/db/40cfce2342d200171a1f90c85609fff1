@@ -1,0 +1,14 @@
+package view;
+
+import model.ModelFacade;
+
+public class FazerReservaCommand implements Command{
+
+	@Override
+	public void execute() {
+		ModelFacade mf = ModelFacade.getInstance();
+		Reserva r = new Reserva();
+		mf.reservarLivro();
+	}
+	
+}

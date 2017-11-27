@@ -1,0 +1,9 @@
+package model;
+
+public abstract class ReservaState {
+	public abstract void ativar();
+	
+	public abstract void baixar();
+	
+	public abstract void cancelar();
+}

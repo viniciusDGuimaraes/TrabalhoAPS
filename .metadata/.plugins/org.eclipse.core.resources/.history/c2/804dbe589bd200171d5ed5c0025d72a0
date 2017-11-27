@@ -1,0 +1,13 @@
+package view;
+
+
+public class FazerReservaDecorator extends CommandDecorator{
+
+	public FazerReservaDecorator(CommandComponent decorates) {
+		super(decorates);
+	}
+	
+	public void autentica(){
+		super.autentica();
+	}
+}

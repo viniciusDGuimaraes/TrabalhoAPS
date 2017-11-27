@@ -1,0 +1,13 @@
+package model;
+
+public class Reserva {
+	private Livro livro;
+	private Usuario usuario;
+	private String prazoRetirada;
+	
+	public Reserva(Livro livro, Usuario usuario, String prazoRetirada) {
+		this.livro = livro;
+		this.usuario = usuario;
+		this.prazoRetirada = prazoRetirada;
+	}
+}

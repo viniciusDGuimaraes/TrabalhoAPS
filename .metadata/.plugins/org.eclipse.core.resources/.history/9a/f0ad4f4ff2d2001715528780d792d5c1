@@ -1,0 +1,27 @@
+package model;
+
+import infrastructure.InfraFacade;
+
+public class LivroVirtual extends Livro{
+	public LivroVirtual(String identificador, String titulo) {
+		super(identificador, titulo);
+	}
+	
+	public LivroVirtual(){
+		super();
+	}
+	
+	public void reservar(Usuario u){
+		Reserva r = new Reserva(this, u);
+		InfraFacade infra = InfraFacade.getInstance();
+		infra.reservarLivro(r);
+	}
+	
+	public void baixarReserva(Usuario u){
+		u.getReserva().baixar();
+	}
+	
+	public void cancelarReserva(Usuario u){
+		u.getReserva().cancelar();
+	}
+}

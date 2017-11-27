@@ -1,0 +1,11 @@
+package Application;
+
+import model.Reserva;
+
+public class ApplicationFacade {	
+	public void reservarLivro(Reserva r){
+		UsuarioServices u = new UsuarioServices();
+		u.reservaLivro(r);
+		System.out.println("Chamou o UsuarioServices");
+	}
+}

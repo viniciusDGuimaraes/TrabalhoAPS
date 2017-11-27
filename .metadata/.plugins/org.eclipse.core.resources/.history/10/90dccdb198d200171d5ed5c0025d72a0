@@ -1,0 +1,24 @@
+package model;
+
+import infrastructure.Database;
+import infrastructure.InfraFacade;
+
+public class ModelFacade {
+	private static ModelFacade instance;
+	
+	public static ModelFacade getInstance(){
+		if(instance == null){
+			instance = new ModelFacade();
+		}
+		return instance;
+	}
+	
+	public void reservarLivro(Reserva r){
+		InfraFacade infra = InfraFacade.getInstance();
+		infra.reservarLivro(r);
+		System.out.println("Chamou infra facade");
+	}
+	
+	private ModelFacade(){
+	}
+}

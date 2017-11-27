@@ -6,15 +6,29 @@ public class Reserva {
 	private Livro livro;
 	private Usuario usuario;
 	private Date prazoRetirada;
-	private Enum status = {ATIVA, CANCELADA, BAIXADA};
+	private ReservaState status;
 	
-	public Reserva(Livro livro, Usuario usuario, Date prazoRetirada) {
+	public ReservaState getStatus(){
+		return status;
+	}
+	
+	public void ativar(){
+		this.status = status.ativar();
+	}
+	
+	public void baixar(){
+		this.status = status.baixar();
+	}
+	
+	public void cancelar(){
+		this.status = status.cancelar();
+	}
+	
+	public Reserva(Livro livro, Usuario usuario) {
 		this.livro = livro;
 		this.usuario = usuario;
-		this.prazoRetirada = prazoRetirada;
+		status = new ReservaAtiva();
 	}
 	
-	public Reserva(){
-		
-	}
+	public Reserva(){}
 }
