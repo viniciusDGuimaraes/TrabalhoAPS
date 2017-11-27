@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class Emprestimo {
+public class Emprestimo extends CalcularMultaAbstract{
 	private Exemplar exemplar;
 	private Usuario usuario;
 	private Date dataEmprestimo; 
@@ -14,5 +14,11 @@ public class Emprestimo {
 		this.usuario = usuario;
 		this.dataEmprestimo = dataEmprestimo;
 		this.dataDevolucao = dataDevolucao;
+	}
+	
+	@Override
+	public void calculaMulta() {
+		System.out.println("Calcula Multa do livro");
+		
 	}
 }
