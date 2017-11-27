@@ -16,4 +16,6 @@ public class Repository {
 	}
 	
 	public static List<Reserva> reservas = new ArrayList<Reserva>();
+	
+	private Repository(){}
 }
