@@ -2,21 +2,10 @@ package infrastructure;
 
 import model.Reserva;
 
-public class InfraFacade {
-	private static InfraFacade instance;
-	
-	public static InfraFacade getInstance(){
-		if(instance == null){
-			instance = new InfraFacade();
-		}
-		return instance;
-	}
-	
+public class InfraFacade {	
 	public void reservarLivro(Reserva r){
-		Repository.reservas.add(r);
+		Repository repo = new Repository.getInstance();
+		repo.reservas.add(r);
 		System.out.println("Reserva Livro");
-	}
-	
-	private InfraFacade(){
 	}
 }
