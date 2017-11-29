@@ -3,14 +3,14 @@ package model;
 import java.util.Date;
 
 public class Emprestimo extends EmprestimoAbstract{
-	private Exemplar exemplar;
+	private ExemplarFisico exemplar;
 	private Usuario usuario;
 	private Date dataEmprestimo; 
 	private Date dataDevolucao;
 	private boolean multaQuitada;
 	private enum status {ATIVO, DEVOLVIDO};
 	
-	public Emprestimo(Exemplar exemplar, Usuario usuario, Date dataEmprestimo, Date dataDevolucao){
+	public Emprestimo(ExemplarFisico exemplar, Usuario usuario, Date dataEmprestimo, Date dataDevolucao){
 		this.exemplar = exemplar;
 		this.usuario = usuario;
 		this.dataEmprestimo = dataEmprestimo;

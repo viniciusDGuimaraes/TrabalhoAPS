@@ -6,22 +6,25 @@ import java.util.List;
 import infrastructure.InfraFacade;
 import infrastructure.IteratorSecao;
 
-public class Livro extends LivroAbstrato{
+public abstract class Livro {
+	public abstract Exemplar createExemplar();
+	
 	private String identificador;
 	private String titulo;
 	private List<Secao> secoes = new ArrayList<Secao>();
+	private List<Exemplar> exemplares;
 	
-	public Livro(String identificador, String titulo) {
+	public Livro(String identificador, String titulo){
 		this.identificador = identificador;
 		this.titulo = titulo;
 	}
 	
 	public Livro(){}
 	
-	@Override
-	public ExemplarAbstrato createExemplar(){
-		System.out.println("Exemplar criado"); //OK
-		return new Exemplar();
+	public void newExemplar(){
+		Exemplar e = createExemplar();
+		this.exemplares.add(e);
+		System.out.println("Exemplar adicionado");
 	}
 	
 	public void adicionarSecao(Secao s){
@@ -38,13 +41,11 @@ public class Livro extends LivroAbstrato{
 		}
 	}
 	
-	@Override
 	public void reservar(Usuario u){
 		Reserva r = new Reserva(this, u);
 		InfraFacade.reservarLivro(r);
 	}
 	
-	@Override
 	public void baixarReserva(Usuario u){
 		List<Reserva> reservas = u.getReservas();
 		for(Reserva reserva : reservas){
@@ -52,15 +53,10 @@ public class Livro extends LivroAbstrato{
 		}
 	}
 	
-	@Override
 	public void cancelarReserva(Usuario u){
 		List<Reserva> reservas = u.getReservas(); 
 		for(Reserva reserva : reservas){
 			reserva.getStatus().cancelar();
 		}
-	}
-	
-	public void emprestarExemplar(){
-		System.out.println("Realizou o empŕestimo");
 	}
 }

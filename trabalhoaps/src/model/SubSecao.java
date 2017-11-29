@@ -6,11 +6,11 @@ import java.util.List;
 import infrastructure.IteratorSecao;
 
 public class SubSecao extends Secao{
-	private LivroAbstrato livro;
+	private Livro livro;
 	private String nome;
 	private List<Secao> secoes = new ArrayList<Secao>();
 	
-	public SubSecao(Livro livro, String nome){
+	public SubSecao(LivroFisico livro, String nome){
 		this.livro = livro;
 		this.nome = nome;
 		System.out.println("Adicionou Seção");

@@ -1,12 +1,13 @@
 package model;
 
-public class Exemplar extends ExemplarAbstrato{
+public abstract class Exemplar {
+	private String codigo;
+	private LivroFisico livro;
 	
-	public Exemplar(String codigo, Livro livro){
-		super(codigo, livro);
+	public Exemplar(String codigo, LivroFisico livro){
+		this.codigo = codigo;
+		this.livro = livro;
 	}
 	
-	public Exemplar(){
-		super();
-	}
+	public Exemplar(){}
 }
