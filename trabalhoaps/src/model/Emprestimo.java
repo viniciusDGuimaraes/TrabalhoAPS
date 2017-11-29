@@ -2,12 +2,13 @@ package model;
 
 import java.util.Date;
 
-public class Emprestimo extends CalcularMultaAbstract{
+public class Emprestimo extends EmprestimoAbstract{
 	private Exemplar exemplar;
 	private Usuario usuario;
 	private Date dataEmprestimo; 
 	private Date dataDevolucao;
 	private boolean multaQuitada;
+	private enum status {ATIVO, DEVOLVIDO};
 	
 	public Emprestimo(Exemplar exemplar, Usuario usuario, Date dataEmprestimo, Date dataDevolucao){
 		this.exemplar = exemplar;
@@ -16,9 +17,10 @@ public class Emprestimo extends CalcularMultaAbstract{
 		this.dataDevolucao = dataDevolucao;
 	}
 	
+	public Emprestimo(){}
+	
 	@Override
 	public void calculaMulta() {
 		System.out.println("Calcula Multa do livro");
-		
 	}
 }

@@ -1,6 +1,6 @@
 package model;
 
-public abstract class CalcularMultaAbstract {
+public abstract class EmprestimoAbstract {
 	public void templateMethod(){
 		calculaMulta();
 	}

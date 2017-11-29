@@ -10,12 +10,12 @@ public class Repository {
 	
 	public static Repository getInstance(){
 		if(instance == null){
-			instance = new InfraFacade();
+			instance = new Repository();
 		}
 		return instance;
 	}
 	
-	public static List<Reserva> reservas = new ArrayList<Reserva>();
+	public List<Reserva> reservas = new ArrayList<Reserva>();
 	
 	private Repository(){}
 }

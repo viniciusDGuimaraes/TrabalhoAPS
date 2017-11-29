@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
 	private String identificador;
 	private String nome;
@@ -20,8 +23,9 @@ public class Usuario {
 		this.tipo = new TipoUsuarioSimples();
 	}
 	
-	public Reserva getReserva(){
-		return new Reserva();
+	public List<Reserva> getReservas(){
+		List<Reserva> reservas = new ArrayList<Reserva>();
+		return reservas;
 	}
 	
 	public void podeReservar(){

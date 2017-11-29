@@ -1,18 +1,17 @@
 package view;
 
 import Application.ApplicationFacade;
-import model.LivroFisico;
+import model.Livro;
+import model.LivroAbstrato;
 import model.Usuario;
 
 public class FazerReservaCommand implements Command{
 
 	@Override
 	public void execute() {
-		LivroFisico l = new LivroFisico();
-		Usuario u = new Usuario();
-		FazerReservaComponent fd = new FazerReservaComponent();
-		fd.autentica();
-		ApplicationFacade.reservarLivro(l, u);
+		LivroAbstrato livro = new Livro();
+		Usuario usuario = new Usuario();
+		ApplicationFacade.reservarLivro(livro, usuario);
+		System.out.println("Chamou o ApplicationFacade");
 	}
-	
 }

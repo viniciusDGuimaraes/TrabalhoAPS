@@ -12,18 +12,6 @@ public class Reserva {
 		return status;
 	}
 	
-	public void ativar(){
-		this.status = status.ativar();
-	}
-	
-	public void baixar(){
-		this.status = status.baixar();
-	}
-	
-	public void cancelar(){
-		this.status = status.cancelar();
-	}
-	
 	public Reserva(Livro livro, Usuario usuario) {
 		this.livro = livro;
 		this.usuario = usuario;
