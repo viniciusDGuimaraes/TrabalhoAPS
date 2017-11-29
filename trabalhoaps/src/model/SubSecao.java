@@ -37,7 +37,7 @@ public class SubSecao extends Secao{
 	public void listarSubSecoes(){
 		IteratorSecao i = new IteratorSecao(secoes);
 		while(i.hasNext()){
-			((SubSecao)i.currentItem()).getNome();
+			System.out.println(((SubSecao)i.currentItem()).getNome());
 			i.next();
 		}
 	}

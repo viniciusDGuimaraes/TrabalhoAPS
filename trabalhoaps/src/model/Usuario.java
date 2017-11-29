@@ -3,7 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+import infrastructure.AutenticacaoAPI;
+
+public class Usuario extends AutenticacaoAPI implements Target{
 	private String identificador;
 	private String nome;
 	private String login;
@@ -23,6 +25,8 @@ public class Usuario {
 		this.tipo = new TipoUsuarioSimples();
 	}
 	
+	public Usuario(){}
+	
 	public List<Reserva> getReservas(){
 		List<Reserva> reservas = new ArrayList<Reserva>();
 		return reservas;
@@ -36,5 +40,9 @@ public class Usuario {
 		this.tipo.podeTomarEmprestimo();
 	}
 	
-	public Usuario(){}
+	@Override
+	public void autenticarUsuario(){
+		this.autenticarUsuarioAPI();
+	}
+	
 }

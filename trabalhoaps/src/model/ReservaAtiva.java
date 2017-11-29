@@ -4,7 +4,7 @@ public class ReservaAtiva extends ReservaState{
 
 	@Override
 	public ReservaState ativar() {
-		System.out.println("Reserva ativada");	
+		System.out.println("A reserva já está ativada");	
 		return new ReservaAtiva();
 	}
 

@@ -32,7 +32,7 @@ public class Livro extends LivroAbstrato{
 	public void listarSecoes(){
 		IteratorSecao i = new IteratorSecao(secoes);
 		while(i.hasNext()){
-			((SubSecao)i.currentItem()).getNome();
+			System.out.println(((SubSecao)i.currentItem()).getNome());
 			((SubSecao)i.currentItem()).listarSubSecoes();
 			i.next();
 		}
@@ -58,5 +58,9 @@ public class Livro extends LivroAbstrato{
 		for(Reserva reserva : reservas){
 			reserva.getStatus().cancelar();
 		}
+	}
+	
+	public void emprestarExemplar(){
+		System.out.println("Realizou o empŕestimo");
 	}
 }
