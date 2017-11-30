@@ -6,6 +6,7 @@ import java.util.List;
 import model.Indice;
 
 public class IteratorIndice implements Iterator{
+	//Iterator - Questão 6
 	private List<Indice> l;
 	private int posicao;
 	
