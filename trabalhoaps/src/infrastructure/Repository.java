@@ -6,6 +6,7 @@ import java.util.List;
 import model.Reserva;
 
 public class Repository {
+	//Singleton - Questão 1
 	private static Repository instance;
 	
 	public static Repository getInstance(){
