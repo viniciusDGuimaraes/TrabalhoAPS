@@ -43,6 +43,7 @@ public class Usuario extends AutenticacaoAPI implements Target{
 		this.tipo.podeTomarEmprestimo();
 	}
 	
+	//Adapter - Questão 12
 	@Override
 	public void autenticarUsuario(){
 		this.autenticarUsuarioAPI();
