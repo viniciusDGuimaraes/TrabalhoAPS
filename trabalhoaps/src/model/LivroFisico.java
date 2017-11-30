@@ -16,7 +16,7 @@ public class LivroFisico extends Livro{
 	public LivroFisico(){
 		super();
 	}
-	
+	//Factory Method - Questão 8
 	public Exemplar createExemplar(){
 		System.out.println("Exemplar físico criado");
 		return new ExemplarFisico();
@@ -28,6 +28,7 @@ public class LivroFisico extends Livro{
 		System.out.println("Exemplar adicionado");
 	}
 	
+	//Impede que Usuário faça um empréstimo por Exemplar
 	public void emprestarExemplar(){
 		System.out.println("Realizou o empŕestimo");
 	}
