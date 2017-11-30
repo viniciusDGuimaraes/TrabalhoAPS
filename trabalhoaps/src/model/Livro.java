@@ -32,6 +32,7 @@ public abstract class Livro {
 		System.out.println("Adicionou seção ao livro");
 	}
 	
+	//Iterator - Questão 6
 	public void listarSecoes(){
 		IteratorIndice i = new IteratorIndice(secoes);
 		while(i.hasNext()){
