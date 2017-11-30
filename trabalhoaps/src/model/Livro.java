@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import infrastructure.InfraFacade;
-import infrastructure.IteratorSecao;
+import infrastructure.IteratorIndice;
 
 public abstract class Livro {
 	public abstract Exemplar createExemplar();
 	
 	private String identificador;
 	private String titulo;
-	private List<Secao> secoes = new ArrayList<Secao>();
+	private List<Indice> secoes = new ArrayList<Indice>();
 	private List<Exemplar> exemplares;
 	
 	public Livro(String identificador, String titulo){
@@ -27,16 +27,16 @@ public abstract class Livro {
 		System.out.println("Exemplar adicionado");
 	}
 	
-	public void adicionarSecao(Secao s){
+	public void adicionarSecao(Indice s){
 		secoes.add(s);
 		System.out.println("Adicionou seção ao livro");
 	}
 	
 	public void listarSecoes(){
-		IteratorSecao i = new IteratorSecao(secoes);
+		IteratorIndice i = new IteratorIndice(secoes);
 		while(i.hasNext()){
-			System.out.println(((SubSecao)i.currentItem()).getNome());
-			((SubSecao)i.currentItem()).listarSubSecoes();
+			System.out.println(((Secao)i.currentItem()).getNome());
+			((Secao)i.currentItem()).listarSubSecoes();
 			i.next();
 		}
 	}

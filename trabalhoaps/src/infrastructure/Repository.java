@@ -17,5 +17,9 @@ public class Repository {
 	
 	public List<Reserva> reservas = new ArrayList<Reserva>();
 	
+	public void reservar(Reserva r){
+		reservas.add(r);
+	}
+	
 	private Repository(){}
 }

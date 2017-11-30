@@ -11,7 +11,7 @@ public class FazerReservaCommand implements Command{
 	public void execute() {
 		Livro livro = new LivroFisico();
 		Usuario usuario = new Usuario();
-		ApplicationFacade.reservarLivro(livro, usuario);
 		System.out.println("Chamou o ApplicationFacade");
+		ApplicationFacade.reservarLivro(livro, usuario);
 	}
 }

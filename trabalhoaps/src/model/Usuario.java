@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import infrastructure.AutenticacaoAPI;
+import infrastructure.NotificationHandler;
 
 public class Usuario extends AutenticacaoAPI implements Target{
 	private String identificador;
@@ -17,7 +18,6 @@ public class Usuario extends AutenticacaoAPI implements Target{
 	}
 	
 	public Usuario(String identificador, String nome, String login, String senha) {
-		super();
 		this.identificador = identificador;
 		this.nome = nome;
 		this.login = login;
@@ -25,7 +25,9 @@ public class Usuario extends AutenticacaoAPI implements Target{
 		this.tipo = new TipoUsuarioSimples();
 	}
 	
-	public Usuario(){}
+	public Usuario(){
+		this.tipo = new TipoUsuarioSimples();
+	}
 	
 	public List<Reserva> getReservas(){
 		List<Reserva> reservas = new ArrayList<Reserva>();

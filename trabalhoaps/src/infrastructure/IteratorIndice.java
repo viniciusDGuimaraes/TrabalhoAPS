@@ -3,13 +3,13 @@ package infrastructure;
 import java.util.Iterator;
 import java.util.List;
 
-import model.Secao;
+import model.Indice;
 
-public class IteratorSecao implements Iterator{
-	private List<Secao> l;
+public class IteratorIndice implements Iterator{
+	private List<Indice> l;
 	private int posicao;
 	
-	public IteratorSecao(List<Secao> l){
+	public IteratorIndice(List<Indice> l){
 		this.l = l;
 		this.posicao= 0;
 	}

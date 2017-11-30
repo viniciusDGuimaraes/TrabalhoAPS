@@ -1,11 +1,44 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Secao {
-	public abstract void adicionar(Secao s);
+import infrastructure.IteratorIndice;
+
+public class Secao extends Indice{
+	private Livro livro;
+	private String nome;
+	private List<Indice> subsecoes = new ArrayList<Indice>();
 	
-	public abstract void remover(Secao s);
+	public Secao(LivroFisico livro, String nome){
+		this.livro = livro;
+		this.nome = nome;
+		System.out.println("Adicionou Seção");
+		livro.adicionarSecao(this);
+	}
 	
-	public abstract void listarSubSecoes();
+	public String getNome(){
+		return this.getNome();
+	}
+	
+	@Override
+	public void adicionar(Indice s){
+		subsecoes.add(s);
+		System.out.println("Adiconou uma subseção");
+	}
+
+	@Override
+	public void remover(Indice s){
+		subsecoes.remove(s);
+		System.out.println("Removeu uma subseção");
+	}
+	
+	@Override
+	public void listarSubSecoes(){
+		IteratorIndice i = new IteratorIndice(subsecoes);
+		while(i.hasNext()){
+			System.out.println(((Secao)i.currentItem()).nome);
+			i.next();
+		}
+	}
 }

@@ -5,7 +5,7 @@ import model.Usuario;
 
 public class ApplicationFacade {	
 	public static void reservarLivro(Livro l, Usuario u){
+		System.out.println("Chama o UsuarioServices");
 		UsuarioServices.reservaLivro(l, u);
-		System.out.println("Chamou o UsuarioServices");
 	}
 }

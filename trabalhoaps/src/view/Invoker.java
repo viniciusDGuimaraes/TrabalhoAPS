@@ -13,7 +13,7 @@ public class Invoker {
 	public static void invoke(String command){
 		try {
 			Command c = (Command)comandos.get(command).newInstance();
-			AutenticaDecorator ad = new AutenticaDecorator(c);
+			Decorator ad = new AutenticaDecorator(c);
 			ad.execute();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

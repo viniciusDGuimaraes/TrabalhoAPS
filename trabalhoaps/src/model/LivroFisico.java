@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import infrastructure.InfraFacade;
-import infrastructure.IteratorSecao;
+import infrastructure.IteratorIndice;
 
 public class LivroFisico extends Livro{
 	
