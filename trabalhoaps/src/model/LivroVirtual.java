@@ -1,5 +1,6 @@
 package model;
 
+//Versao virtual do livro(Abstract Factory)
 public class LivroVirtual extends Livro{
 	
 	public LivroVirtual(String identificador, String titulo) {
