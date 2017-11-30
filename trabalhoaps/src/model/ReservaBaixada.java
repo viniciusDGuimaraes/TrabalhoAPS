@@ -1,7 +1,7 @@
 package model;
 
 public class ReservaBaixada extends ReservaState{
-
+	//State - Questão 10
 	@Override
 	public ReservaState ativar() {
 		System.out.println("Não é possível ativar uma reserva que foi baixada");
