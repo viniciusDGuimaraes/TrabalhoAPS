@@ -1,7 +1,7 @@
 package model;
 
 public class ReservaAtiva extends ReservaState{
-
+	//State - Questão 10
 	@Override
 	public ReservaState ativar() {
 		System.out.println("A reserva já está ativada");	
