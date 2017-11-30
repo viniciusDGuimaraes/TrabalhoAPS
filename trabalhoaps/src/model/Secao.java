@@ -6,6 +6,7 @@ import java.util.List;
 import infrastructure.IteratorIndice;
 
 public class Secao extends Indice{
+	//Composite - Questão 5
 	private Livro livro;
 	private String nome;
 	private List<Indice> subsecoes = new ArrayList<Indice>();
