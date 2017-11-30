@@ -1,7 +1,7 @@
 package model;
 
 public class ReservaCancelada extends ReservaState{
-
+	//State - Questão 10
 	@Override
 	public ReservaState ativar() {
 		System.out.println("Não é possivel ativar uma reserva que foi cancelada");
