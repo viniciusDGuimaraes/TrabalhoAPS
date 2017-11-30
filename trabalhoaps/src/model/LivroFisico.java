@@ -7,7 +7,7 @@ import infrastructure.InfraFacade;
 import infrastructure.IteratorIndice;
 
 public class LivroFisico extends Livro{
-	private List<Exemplar> exemplares;
+	private List<Exemplar> exemplares = new ArrayList<Exemplar>();
 	
 	public LivroFisico(String identificador, String titulo) {
 		super(identificador, titulo);
