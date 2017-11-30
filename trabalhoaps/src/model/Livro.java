@@ -6,13 +6,10 @@ import java.util.List;
 import infrastructure.InfraFacade;
 import infrastructure.IteratorIndice;
 
-public abstract class Livro {
-	public abstract Exemplar createExemplar();
-	
+public abstract class Livro {	
 	private String identificador;
 	private String titulo;
 	private List<Indice> secoes = new ArrayList<Indice>();
-	private List<Exemplar> exemplares;
 	
 	public Livro(String identificador, String titulo){
 		this.identificador = identificador;
@@ -20,12 +17,6 @@ public abstract class Livro {
 	}
 	
 	public Livro(){}
-	
-	public void newExemplar(){
-		Exemplar e = createExemplar();
-		this.exemplares.add(e);
-		System.out.println("Exemplar adicionado");
-	}
 	
 	public void adicionarSecao(Indice s){
 		secoes.add(s);
