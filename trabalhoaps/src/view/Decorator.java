@@ -1,6 +1,7 @@
 package view;
 
 public class Decorator implements Command{
+	//Decorator - Questão 4
 	private Command component;
 	
 	public Decorator(Command decorates){
