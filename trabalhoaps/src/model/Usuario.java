@@ -11,6 +11,7 @@ public class Usuario extends AutenticacaoAPI implements Target{
 	private String nome;
 	private String login;
 	private String senha;
+	//Strategy - Questão 11
 	private TipoUsuario tipo;
 	
 	public void setTipo(TipoUsuario tipo){
