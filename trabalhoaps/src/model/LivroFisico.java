@@ -6,6 +6,7 @@ import java.util.List;
 import infrastructure.InfraFacade;
 import infrastructure.IteratorIndice;
 
+//Versao fisica do livro(Abstract Factory)
 public class LivroFisico extends Livro{
 	private List<Exemplar> exemplares = new ArrayList<Exemplar>();
 	
