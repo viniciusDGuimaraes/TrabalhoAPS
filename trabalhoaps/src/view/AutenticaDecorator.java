@@ -1,7 +1,7 @@
 package view;
 
 public class AutenticaDecorator extends Decorator{
-
+	//Decorator de autenticação - Questão 4
 	public AutenticaDecorator(Command decorates) {
 		super(decorates);
 	}
