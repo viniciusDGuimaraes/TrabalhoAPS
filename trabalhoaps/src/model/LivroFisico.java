@@ -7,6 +7,7 @@ import infrastructure.InfraFacade;
 import infrastructure.IteratorIndice;
 
 public class LivroFisico extends Livro{
+	private List<Exemplar> exemplares;
 	
 	public LivroFisico(String identificador, String titulo) {
 		super(identificador, titulo);
@@ -16,10 +17,15 @@ public class LivroFisico extends Livro{
 		super();
 	}
 	
-	@Override
 	public Exemplar createExemplar(){
-		System.out.println("Exemplar físico criado"); //OK
+		System.out.println("Exemplar físico criado");
 		return new ExemplarFisico();
+	}
+	
+	public void newExemplar(){
+		Exemplar e = createExemplar();
+		this.exemplares.add(e);
+		System.out.println("Exemplar adicionado");
 	}
 	
 	public void emprestarExemplar(){
