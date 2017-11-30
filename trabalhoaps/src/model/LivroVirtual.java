@@ -9,11 +9,4 @@ public class LivroVirtual extends Livro{
 	public LivroVirtual(){
 		super();
 	}
-	
-	@Override
-	public Exemplar createExemplar(){
-		System.out.println("Exemplar virtual criado"); //OK
-		return new ExemplarVirtual();
-	}
-
 }
