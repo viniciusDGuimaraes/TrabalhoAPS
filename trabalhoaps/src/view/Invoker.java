@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Invoker {
+	//Classe que invoca os commands - Questão 3
 	private static Map<String, Class> comandos = new HashMap<String, Class>();
 	
 	static{
@@ -13,6 +14,7 @@ public class Invoker {
 	public static void invoke(String command){
 		try {
 			Command c = (Command)comandos.get(command).newInstance();
+			//Decorator de autenticação - Questão 4
 			Decorator ad = new AutenticaDecorator(c);
 			ad.execute();
 		} catch (InstantiationException e) {
