@@ -6,6 +6,7 @@ public class Reserva {
 	private Livro livro;
 	private Usuario usuario;
 	private Date prazoRetirada;
+	//State da Reserva - Questão 10 (Métodos para baixar e cancelar estão na classe Livro)
 	private ReservaState status;
 	
 	public ReservaState getStatus(){
